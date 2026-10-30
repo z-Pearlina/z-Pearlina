@@ -1,0 +1,22 @@
+{
+  "name": "profile-assets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fonts": "node fetch-fonts.mjs",
+    "hero": "node build-hero.mjs",
+    "parts": "node build-parts.mjs",
+    "sky": "node build-sky.mjs",
+    "preview": "node preview-readme.mjs",
+    "check": "node check.mjs"
+  },
+  "devDependencies": {
+    "github-markdown-css": "^5.9.0",
+    "playwright": "^1.64.1",
+    "simple-icons": "^16.36.0"
+  },
+  "dependencies": {
+    "d3-contour": "^4.0.2",
+    "harfbuzzjs": "^1.6.4"
+  }
+}
