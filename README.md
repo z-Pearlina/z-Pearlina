@@ -37,7 +37,7 @@ I build calm, useful software (healthcare apps, public-service tools, knowledge 
 
 I've always wanted to help people. Technology is how I do it.
 
-I think and write in Arabic first, and I work in English (B2) and French (B1).
+I think and write in Arabic first, and I work in English (C1) and French (B1).
 
 <!-- Stack -->
 <picture>
