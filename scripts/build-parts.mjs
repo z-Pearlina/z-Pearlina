@@ -104,7 +104,7 @@ const sealGlyph = (color) => `<path d="M12 2.5 20 6v6c0 5-3.4 8.2-8 9.5C7.4 20.2
 const BAYS = [
   { title: 'Mobile', rows: [['React Native', icons.siReact], ['Expo', icons.siExpo], ['TypeScript', icons.siTypescript], ['NativeWind', windGlyph]] },
   { title: 'Web', rows: [['Next.js', icons.siNextdotjs], ['TypeScript', icons.siTypescript], ['Tailwind CSS', icons.siTailwindcss], ['Framer Motion', icons.siFramer]] },
-  { title: 'Backend & data', rows: [['Supabase', icons.siSupabase]] },
+  { title: 'Backend & data', rows: [['Supabase', icons.siSupabase], ['Firebase', icons.siFirebase], ['MongoDB', icons.siMongodb]] },
   { title: 'Security', tag: '(learning)', rows: [['Post-quantum', latticeGlyph], ['Digital signatures', sealGlyph]] },
 ];
 
@@ -122,7 +122,7 @@ function dial(t, x, y, r, delay) {
 function panel(mode) {
   const t = THEME[mode];
   const W = 1012, gap = 24, bayW = (W - gap) / 2;
-  const heights = [340, 224];
+  const heights = [340, 284];
   const css = `
 @keyframes n{from{transform:rotate(-26deg)}to{transform:rotate(30deg)}}
 .n{animation:n 16s ease-in-out infinite alternate}
@@ -144,7 +144,7 @@ function panel(mode) {
     return `<g transform="translate(${x} ${y})"><rect x="1" y="1" width="${bayW - 2}" height="${h - 2}" rx="12" fill="${t.panel}" stroke="${t.line}" stroke-width="1.6"/><rect width="${bayW}" height="${h}" rx="12" fill="url(#grid)"/>${corners}<path d="${head.d}" fill="${t.ink}"/>${tag ? `<path d="${tag.d}" fill="${RED}"/>` : ''}${rows}${dial(t, bayW - 76, 74, 46, -i * 5)}</g>`;
   };
   const total = heights[0] + gap + heights[1];
-  return `${open(W, total, 'Instrument panel of tools. Mobile: React Native, Expo, TypeScript, NativeWind. Web: Next.js, TypeScript, Tailwind CSS, Framer Motion. Backend and data: Supabase. Security, still learning: post-quantum cryptography and digital signatures.', css)}
+  return `${open(W, total, 'Instrument panel of tools. Mobile: React Native, Expo, TypeScript, NativeWind. Web: Next.js, TypeScript, Tailwind CSS, Framer Motion. Backend and data: Supabase, Firebase, MongoDB. Security, still learning: post-quantum cryptography and digital signatures.', css)}
 <defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="${t.line}" stroke-opacity=".06"/></pattern></defs>
 ${BAYS.map(bay).join('\n')}
 </svg>

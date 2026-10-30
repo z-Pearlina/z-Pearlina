@@ -50,7 +50,7 @@ I think and write in Arabic first, and I work in English (B2) and French (B1).
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/stack-night.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/stack-day.svg">
-    <img src="assets/stack-day.svg" width="100%" alt="Mobile: React Native, Expo, TypeScript, NativeWind. Web: Next.js, TypeScript, Tailwind CSS, Framer Motion. Backend and data: Supabase. Security, still learning: post-quantum cryptography and digital signatures.">
+    <img src="assets/stack-day.svg" width="100%" alt="Mobile: React Native, Expo, TypeScript, NativeWind. Web: Next.js, TypeScript, Tailwind CSS, Framer Motion. Backend and data: Supabase, Firebase, MongoDB. Security, still learning: post-quantum cryptography and digital signatures.">
   </picture>
 </p>
 
