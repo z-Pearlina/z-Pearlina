@@ -1,5 +1,5 @@
 // Downloads the OFL fonts used by the generators into scripts/fonts (git-ignored).
-import { writeFile, access } from 'node:fs/promises';
+import { writeFile, access, mkdir } from 'node:fs/promises';
 
 const BASE = 'https://raw.githubusercontent.com/google/fonts/main/ofl/';
 const FONTS = {
@@ -11,6 +11,8 @@ const FONTS = {
   'Amiri.ttf': 'amiri/Amiri-Regular.ttf',
   'YujiBoku.ttf': 'yujiboku/YujiBoku-Regular.ttf',
 };
+
+await mkdir(new URL('fonts/', import.meta.url), { recursive: true });
 
 for (const [name, path] of Object.entries(FONTS)) {
   const out = new URL(`fonts/${name}`, import.meta.url);
